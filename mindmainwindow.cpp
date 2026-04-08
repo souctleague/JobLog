@@ -233,7 +233,7 @@ void mindMainWindow::CreateRowData(QList<QStandardItem*>& items, const WorkData&
 
     // 完成状态
     QStandardItem *isWorkCompleteItem = new QStandardItem("");
-    isWorkCompleteItem->setData(data.isWorkComplete, Qt::CheckStateRole);
+    isWorkCompleteItem->setCheckState(data.isWorkComplete ? Qt::Checked : Qt::Unchecked);
     items.append(isWorkCompleteItem);
 
     // 事务类型
